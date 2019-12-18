@@ -2,8 +2,8 @@ package main
 
 import (
 	"database/sql"
+	"log"
 
-	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 )
 
@@ -15,7 +15,7 @@ func sqlInit() {
 	if err != nil {
 		panic(err.Error)
 	}
-	fmt.Println("successflly get db connect")
+	log.Println("successflly get db connect")
 	SQLHandler = conn
 }
 
@@ -25,17 +25,17 @@ func getMessage() {
 	rows, err := SQLHandler.Query("SELECT * FROM messages")
 
 	if err != nil {
-		fmt.Println(err)
+		log.Println(err)
 	}
 	defer rows.Close()
 
 	for rows.Next() {
 		var m Message
 		if err := rows.Scan(&m.ID, &m.Name, &m.Message); err != nil {
-			fmt.Println(err)
+			log.Println(err)
 		}
 		// names = append(names, name)
-		fmt.Println("Log MessgeList", m)
+		log.Println("Log MessgeList", m)
 	}
 }
 
@@ -50,4 +50,3 @@ type Message struct {
 	Name    string `json:"name"`
 	Message string `json:"message"`
 }
-
