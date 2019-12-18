@@ -5,4 +5,4 @@ db-end:
 	docker-compose -f docker-compose.mysql.yml down -v
 
 db-use:
-	docker exec -it mysql mysql -u root -p
+	docker exec -it mysql mysql_jp -u root -p
