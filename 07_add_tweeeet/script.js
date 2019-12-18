@@ -1,9 +1,9 @@
 // HTMLが完全に読み込まれたあとに以下の処理が実行される
 window.onload = function () {
-    bottonClick()
+    buttonClick()
 }
 
-function bottonClick() {
+function buttonClick() {
     // htmlのbuttonのデータを変数に格納
     const button = document.querySelector('button');
     const container = document.getElementById('container')

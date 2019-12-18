@@ -1,9 +1,9 @@
 // HTMLが完全に読み込まれたあとに以下の処理が実行される
 window.onload = function () {
-    bottonClick()
+    buttonClick()
 }
 
-function bottonClick() {
+function buttonClick() {
     // htmlのbuttonのデータを変数に格納
     const button = document.querySelector('button');
 
@@ -25,10 +25,10 @@ function insertTweetHTML(item) {
 
     const tweet =
         '<div class="tweet">' +
-        '   <img class="icon" src="http://knights.ton-katsu.net/playtime/works/painting/82_sonshi.jpg"/>' +
+        '   <img class="icon" src="http://knights.ton-katsu.net/playtime/works/c4d/75_gotoba.jpg"/>' +
         '   <div class="message_container">' +
-        '       <div class="user">${JSON.stringify(item.name)}</div>' +
-        '       <div class="message">${JSON.stringify(item.message)}</div>' +
+        `       <div class="user">${JSON.stringify(item.name)}</div>` +
+        `       <div class="message">${JSON.stringify(item.message)}</div>` +
         '   </div>' +
         '</div>'
 
