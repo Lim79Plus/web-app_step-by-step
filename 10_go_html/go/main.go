@@ -18,7 +18,7 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 	// データのタイプの設定
 	w.Header().Set("Content-Type", "application/json")
 	// データの返却
-	w.Write([]byte(`{ "name" : "GOGO Gopher!!", "message" : "hello from Go"}`))
+	w.Write([]byte(`{ "name" : "ごーふぁーちゃん", "message" : "こんにちわ"}`))
 
 }
 
