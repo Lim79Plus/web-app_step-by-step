@@ -4,24 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Reset -->
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <!-- 別ファイルのCSSの読み込み -->
     <link rel="stylesheet" href="style.css">
+    <!-- 別ファイルのJSの読み込み -->
     <script src="script.js"></script>
     <title>Tweeeeet</title>
 </head>
 
 <body>
     <div id="main">
-        <h1>Your Twitter like App!</h1>
-        <button id="button">Button</button>
-        <div id="container">
-            <div id="iconColumn">
-                <img id="icon" src="">
+        <div id="flex_container">
+
+            <div class="column_left">
+                <button id="button">ツイートを読み込む</button>
             </div>
-            <div id="contentColumn">
-                <div id="user">User Name</div>
-                <article id="content">Tweet</article>
+
+            <div class="column_center">
+                <div id="container">
+                    <div class="tweet">
+                        <img class="icon" src="http://knights.ton-katsu.net/playtime/works/c4d/75_gotoba.jpg" />
+                        <div class="message_container">
+                            <div class="user">なまえ</div>
+                            <div class="message">ついったーのつぶやき</div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <div class="column_right">
+            </div>
+
         </div>
     </div>
 

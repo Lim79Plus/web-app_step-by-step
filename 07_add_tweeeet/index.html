@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+
     <!-- 別ファイルのCSSの読み込み -->
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
@@ -11,13 +15,24 @@
 </head>
 
 <body>
-    <div id="main">
-        <h1>Your Twitter like App!</h1>
-        <button id="button">Button</button>
-        <div id="container">
-           
+<div id="main">
+    <div id="flex_container">
+
+        <div class="column_left">
+            <button id="button">ツイートを読み込む</button>
         </div>
+
+        <div class="column_center">
+            <div id="container">
+                <!-- insert tweets here -->
+            </div>
+        </div>
+
+        <div class="column_right">
+        </div>
+
     </div>
+</div>
 
 </body>
 

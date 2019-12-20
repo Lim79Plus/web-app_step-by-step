@@ -32,4 +32,5 @@ function insertTweetHTML(item) {
         '   </div>' +
         '</div>'
 
-    container.insertAdjacentHTML('afterbegin', tweet);}
+    container.insertAdjacentHTML('afterbegin', tweet);
+}

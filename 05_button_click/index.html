@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Reset -->
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <!-- 別ファイルのCSSの読み込み -->
     <link rel="stylesheet" href="style.css">
     <title>Tweeeeet</title>
@@ -11,16 +13,27 @@
 
 <body>
     <div id="main">
-        <h1>Your Twitter like App!</h1>
-        <button id="button">Button</button>
-        <div id="container">
-            <div id="iconColumn">
-                <img id="icon" src="">
+        <div id="flex_container">
+
+            <div class="column_left">
+                <button id="button">ツイートを読み込む</button>
             </div>
-            <div id="contentColumn">
-                <div id="user">User Name</div>
-                <article id="content">Tweet</article>
+
+            <div class="column_center">
+                <div id="container">
+                    <div class="tweet">
+                        <img class="icon" src="http://knights.ton-katsu.net/playtime/works/c4d/75_gotoba.jpg" />
+                        <div class="message_container">
+                            <div class="user">なまえ</div>
+                            <div class="message">ついったーのつぶやき</div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <div class="column_right">
+            </div>
+
         </div>
     </div>
 
@@ -28,16 +41,10 @@
 <script>
     // htmlのbuttonのデータを変数に格納
     const button = document.querySelector('button');
-    const content = document.getElementById('content')
-    // 変数
-    var counter = 0
-
     // button要素が押された時の動作を定義
     button.addEventListener('click', () => {
         // count = count + 1 と同じ意味
-        counter++ 
-        // htmlのcontentの中の要素を変更している
-        content.innerHTML = `Click count: ${counter}`;
+        alert("ぼたんくりっくしたよー")
     });
 
 </script>

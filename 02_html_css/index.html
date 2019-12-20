@@ -4,46 +4,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Reset -->
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <title>Tweeeeet</title>
 </head>
 <style>
-    /* background color from  https://www.grabient.com/ */
-    html {
-        height: 100%
-    }
     body {
-        text-align: center;
-        font-size: 2rem;
-        background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+        font-family: "Helvetica Neue", "メイリオ", sans-serif;
     }
 
-    main {
-        margin-top: 50rem;
+    #main {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        color: #ffffff;
+        background: #15202b;
     }
 
-    h1 {
-        color: #393D9C;
+    #button {
+        display: block;
+        font-size: 1.05rem;
+        padding: 1rem;
+        background-color: #ff6530;
+        color: #ffffff;
+        border-radius: 1.8rem;
+        border: none;
+        margin: 2rem auto;
+    }
+
+    #flex_container {
+        display: flex;
+        height: 100%;
+        overflow-y: scroll;
     }
 
     #container {
-        color: darkgreen;
+        margin: 2rem;
+    }
+
+    .column_left {
+        width: 30%;
+    }
+
+    .column_center {
+        width: 70%;
+    }
+
+    @media screen and (min-width: 800px) {
+        .column_center {
+            width: 50%;
+        }
+    }
+
+
+    .tweet {
+        border-style: solid;
+        border-width: 1px 1px 0 1px;
+        border-color: #606070;
+        padding: 0.5rem;
+    }
+
+    .user {
+        font-weight: bold;
+        margin: 0 0 0.3rem 0;
+    }
+
+    .message_container {}
+
+    .icon {
+        float: left;
+        margin: 0.5em 1rem 0.5rem 0.5rem;
+        width: 50px;
+        height: 50px;
+        -webkit-clip-path: circle(50.0% at 50% 50%);
     }
 </style>
 
 <body>
     <div id="main">
-        <h1>Your Twitter like App!</h1>
-        <div id="container">
-            <div id="iconColumn">
-                <img id="icon" src="">
+        <div id="flex_container">
+
+            <div class="column_left">
+                <button id="button">ツイートを読み込む</button>
             </div>
-            <div id="contentColumn">
-                <div id="user">User Name</div>
-                <article id="content">Tweet</article>
+
+            <div class="column_center">
+                <div id="container">
+                    <div class="tweet">
+                        <img class="icon" src="http://knights.ton-katsu.net/playtime/works/c4d/75_gotoba.jpg" />
+                        <div class="message_container">
+                            <div class="user">なまえ</div>
+                            <div class="message">ついったーのつぶやき</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column_right">
             </div>
         </div>
     </div>
-
 </body>
+
 
 </html>

@@ -2,7 +2,10 @@ package main
 
 import "log"
 
+import "fmt"
+
 func main() {
+	fmt.Println("hello world from fmt")
 	log.Println("Hello World from go")
 	funcSample()
 	funcString("passed argment")

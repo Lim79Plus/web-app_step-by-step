@@ -28,6 +28,7 @@ body {
 }
 
 #container {
+    margin: 2rem;
 }
 
 .column_left {
@@ -40,7 +41,7 @@ body {
 
 @media screen and (min-width: 800px) {
     .column_center {
-        width: 40%;
+        width: 50%;
     }
 }
 
